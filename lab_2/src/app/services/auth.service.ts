@@ -51,12 +51,4 @@ export class AuthService {
     localStorage.removeItem(this.accessTokenKey);
   }
 
-  autoLogout(expirasionDate: number) {
-    setTimeout( () => {
-      this.logout();
-      this.router.navigate(['']);
-      alert('Auto Logout!');
-    }, expirasionDate);
-  }
-
 }
