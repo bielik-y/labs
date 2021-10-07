@@ -1,0 +1,30 @@
+<mat-toolbar class="toolbar">Home page
+    <button mat-raised-button (click)="logout()" class="logout-button">Log out</button>
+</mat-toolbar>
+<div class="container">
+    <h2>Orders</h2>
+    <ngx-datatable class="mt-4 material"
+    [rows]="orders"
+    [columnMode]="'force'"
+    [headerHeight]="50"
+    [footerHeight]="50"
+    [rowHeight]="75"
+    [limit]=10>
+        <ngx-datatable-column name="Name">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Category">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+            </ng-template>
+        </ngx-datatable-column>
+        <ngx-datatable-column name="Price">
+            <ng-template let-value="value" ngx-datatable-cell-template>
+                <strong>{{value}}</strong>
+            </ng-template>
+        </ngx-datatable-column>
+
+</ngx-datatable>
+</div>
